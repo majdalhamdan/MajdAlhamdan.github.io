@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Majd Alhamdan CV</title>
+<meta name="description" content="Majd Alhamdan, PharmD: scientific evaluation, HTA, regulatory affairs and health informatics in Saudi Arabia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@500&display=swap">
+<style>
+img{max-width:100%}
+[hidden]:not([hidden=until-found i]){display:none!important}
+:root {
+  --bg: #f4f6f3;
+  --surface: #ffffff;
+  --ink: #17221b;
+  --muted: #5b6a60;
+  --line: #d7ded8;
+  --pine: #1d5c3c;
+  --pine-soft: #e3ede6;
+  --gold: #8a6a1f;
+  --gold-soft: #f3ecd9;
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --arabic: "IBM Plex Sans Arabic", "Geeza Pro", Tahoma, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101612; --surface: #172019; --ink: #e4ebe5; --muted: #98a89c;
+    --line: #2a372e; --pine: #7cc39b; --pine-soft: #1c3226; --gold: #d4b263; --gold-soft: #2e2716;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101612; --surface: #172019; --ink: #e4ebe5; --muted: #98a89c;
+  --line: #2a372e; --pine: #7cc39b; --pine-soft: #1c3226; --gold: #d4b263; --gold-soft: #2e2716;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 1.0625rem; line-height: 1.6;
+  padding-inline: 20px; padding-block: 0 64px;
+}
+a { color: var(--pine); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; border-radius: 2px; }
+button { font: inherit; color: inherit; }
+.wrap { max-width: 940px; margin: 0 auto; }
+
+.top {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding-block: 20px; border-bottom: 1px solid var(--line);
+  font-family: var(--mono); font-size: 0.8rem; color: var(--muted);
+}
+.top nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.top nav a { color: var(--muted); text-decoration: none; }
+.top nav a:hover { color: var(--pine); }
+
+.hero { padding-block: 56px 28px; display: grid; gap: 20px; }
+.hero .ar { font-family: var(--arabic); font-weight: 500; font-size: 1.25rem; color: var(--pine); margin: 0; }
+.hero h1 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(2.8rem, 9vw, 5.6rem); line-height: 0.95; letter-spacing: -0.03em; margin: 0;
+}
+.hero .role { font-family: var(--display); font-weight: 500; font-size: clamp(1.1rem, 2.6vw, 1.45rem); color: var(--muted); margin: 0; text-wrap: balance; }
+.hero .role b { color: var(--ink); font-weight: 500; }
+.hero .lede { max-width: 62ch; margin: 0; font-size: 1.15rem; }
+.now {
+  display: inline-flex; align-items: center; gap: 10px; align-self: start; justify-self: start;
+  font-family: var(--mono); font-size: 0.82rem; background: var(--pine-soft); color: var(--pine);
+  padding: 6px 12px; border-radius: 999px;
+}
+.now i { width: 8px; height: 8px; border-radius: 50%; background: var(--pine); flex: none; }
+@media (prefers-reduced-motion: no-preference) { .now i { animation: pulse 2s ease-in-out infinite; } }
+@keyframes pulse { 50% { opacity: 0.35; } }
+
+.facts {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); margin: 8px 0 0; padding: 0;
+}
+.facts div { padding: 14px 16px 16px 0; display: grid; gap: 2px; }
+.facts div + div { padding-left: 16px; border-left: 1px solid var(--line); }
+.facts dt { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 0; font-family: var(--display); font-weight: 700; font-size: 1.6rem; font-variant-numeric: tabular-nums; }
+.facts dd small { font-family: var(--mono); font-weight: 400; font-size: 0.8rem; color: var(--muted); }
+
+.lens {
+  position: sticky; top: 0; z-index: 5;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+  padding-block: 12px; margin-top: 28px;
+  display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap;
+}
+.lens-label { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.lens-btns { display: flex; gap: 6px; flex-wrap: wrap; }
+.lens button {
+  cursor: pointer; font-family: var(--mono); font-size: 0.82rem;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px;
+  display: inline-flex; gap: 6px; align-items: baseline; transition: background 0.15s, border-color 0.15s;
+}
+.lens button:hover { border-color: var(--pine); }
+.lens button[aria-pressed="true"] { background: var(--pine); border-color: var(--pine); color: var(--bg); }
+.lens button span { opacity: 0.7; font-size: 0.75rem; }
+.lens-note { flex-basis: 100%; font-size: 0.92rem; color: var(--muted); font-style: italic; margin: 0; min-height: 1.4em; }
+
+[data-tags] { transition: opacity 0.25s, filter 0.25s; }
+body.filtering [data-tags].dim { opacity: 0.28; filter: grayscale(1); }
+body.filtering [data-tags].hit .mark { background: var(--gold-soft); box-shadow: 0 0 0 4px var(--gold-soft); border-radius: 2px; }
+
+section { padding-block: 48px 8px; scroll-margin-top: 80px; }
+.sec-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; }
+.sec-head h2 { font-family: var(--display); font-weight: 700; font-size: 1.75rem; letter-spacing: -0.01em; margin: 0; }
+.sec-head::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+.entry { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 4px 28px; padding-block: 0 36px; }
+.entry .when { font-family: var(--mono); font-size: 0.82rem; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 5px; }
+.entry .when b { display: block; color: var(--pine); font-weight: 500; }
+.entry h3 { font-family: var(--display); font-weight: 700; font-size: 1.25rem; line-height: 1.25; margin: 0; text-wrap: balance; }
+.entry .org { color: var(--pine); font-style: italic; margin: 2px 0 10px; }
+.entry ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+.entry li::marker { color: var(--pine); }
+.entry > div { min-width: 0; }
+
+.scale-wrap { margin-top: 18px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.scale { width: 150px; max-width: 100%; height: auto; flex: none; cursor: pointer; }
+.scale .beam { transform-origin: 75px 30px; transition: transform 0.6s cubic-bezier(.3,1.6,.5,1); }
+.scale .pan-l, .scale .pan-r { transition: transform 0.6s cubic-bezier(.3,1.6,.5,1); }
+.scale-wrap p { margin: 0; font-size: 0.95rem; color: var(--muted); flex: 1; min-width: 14rem; }
+.scale-wrap button {
+  cursor: pointer; background: none; border: 1px solid var(--line); border-radius: 4px; padding: 3px 10px;
+  font-family: var(--mono); font-size: 0.8rem; color: var(--pine); margin-top: 6px;
+}
+
+.ctd { margin-top: 18px; }
+.ctd-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.ctd-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.ctd-row button {
+  cursor: pointer; text-align: left; background: var(--pine-soft); border: 1px solid transparent; border-radius: 4px;
+  padding: 10px 10px 12px; display: grid; gap: 2px; min-width: 0; transition: transform 0.15s, border-color 0.15s;
+}
+.ctd-row button:hover { transform: translateY(-2px); }
+.ctd-row button[aria-pressed="true"] { border-color: var(--pine); background: var(--surface); }
+.ctd-row b { font-family: var(--mono); font-weight: 500; font-size: 0.78rem; color: var(--pine); }
+.ctd-row span { font-size: 0.86rem; line-height: 1.3; }
+.ctd-detail { margin-top: 8px; padding: 12px 14px; border-left: 2px solid var(--pine); background: var(--surface); font-size: 0.95rem; min-height: 3.2em; }
+
+.projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.proj { border-top: 2px solid var(--pine); padding-top: 14px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.proj .yr { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); }
+.proj h3 { font-family: var(--display); font-weight: 700; font-size: 1.12rem; line-height: 1.25; margin: 0; text-wrap: balance; }
+.proj p { margin: 0; font-size: 0.98rem; }
+.tag { align-self: flex-start; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); border: 1px solid currentColor; border-radius: 3px; padding: 1px 6px; }
+.proj .demo { margin-top: auto; font-family: var(--mono); font-size: 0.85rem; }
+
+.bia {
+  margin-top: 36px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
+  padding: 24px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 28px;
+}
+.bia h3 { font-family: var(--display); font-weight: 700; font-size: 1.3rem; margin: 0 0 4px; }
+.bia .hint { margin: 0 0 18px; color: var(--muted); font-size: 0.95rem; }
+.ctrl { display: grid; gap: 4px; margin-bottom: 14px; }
+.ctrl label { display: flex; justify-content: space-between; gap: 10px; font-size: 0.95rem; }
+.ctrl output { font-family: var(--mono); font-size: 0.85rem; color: var(--pine); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ctrl input[type=range] { width: 100%; accent-color: var(--pine); }
+.bia-out { min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.bars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: end; height: 190px; border-bottom: 1px solid var(--ink); }
+.bar { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; gap: 6px; min-width: 0; }
+.bar .v { font-family: var(--mono); font-size: 0.8rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bar .col { width: 100%; max-width: 70px; background: var(--pine); border-radius: 3px 3px 0 0; transition: height 0.35s ease; min-height: 2px; }
+.bar.neg .col { background: var(--gold); }
+.bar-labels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; text-align: center; font-family: var(--mono); font-size: 0.78rem; color: var(--muted); margin-top: -8px; }
+.total { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 12px; }
+.total span { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.total strong { font-family: var(--display); font-size: 1.7rem; font-variant-numeric: tabular-nums; }
+.disclaimer { font-size: 0.82rem; color: var(--muted); font-style: italic; margin: 0; }
+
+.refs { list-style: none; margin: 0; padding: 0; counter-reset: ref; }
+.refs li {
+  counter-increment: ref; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr) auto; gap: 4px 16px; align-items: baseline;
+  padding-block: 14px; border-bottom: 1px solid var(--line);
+}
+.refs li:first-child { border-top: 1px solid var(--line); }
+.refs li::before { content: "[" counter(ref) "]"; font-family: var(--mono); font-size: 0.85rem; color: var(--pine); }
+.refs .t { min-width: 0; }
+.refs .j { font-style: italic; color: var(--muted); }
+.refs .t a { color: var(--ink); }
+.refs .t a:hover { color: var(--pine); }
+.refs .y { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
+
+.creds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 40px; }
+.creds h3 { font-family: var(--mono); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+.creds ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.creds li { min-width: 0; }
+.creds li b { font-weight: 600; }
+.creds .sub { display: block; color: var(--muted); font-size: 0.95rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips span { font-size: 0.92rem; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+
+.contact { margin-top: 56px; background: var(--pine); color: var(--bg); border-radius: 6px; padding: 36px 32px; display: grid; gap: 18px; }
+.contact h2 { font-family: var(--display); font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0; line-height: 1.1; text-wrap: balance; }
+.contact p { margin: 0; max-width: 56ch; }
+.contact .row { display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; font-family: var(--mono); font-size: 0.92rem; }
+.contact a { color: var(--bg); }
+.email { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.email code { font-family: var(--mono); user-select: all; overflow-wrap: anywhere; }
+.copy { cursor: pointer; font-size: 0.8rem; background: transparent; color: var(--bg); border: 1px solid currentColor; border-radius: 3px; padding: 3px 10px; }
+.copy:hover { background: var(--bg); color: var(--pine); }
+.contact :focus-visible { outline-color: var(--bg); }
+footer { margin-top: 28px; font-family: var(--mono); font-size: 0.78rem; color: var(--muted); }
+
+@media (max-width: 760px) {
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .facts div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .facts div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .entry { grid-template-columns: minmax(0, 1fr); }
+  .entry .when { padding-top: 0; }
+  .entry .when b { display: inline; margin-right: 8px; }
+  .projects, .creds, .bia { grid-template-columns: minmax(0, 1fr); }
+  .ctd-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .refs li { grid-template-columns: 2.2rem minmax(0, 1fr); }
+  .refs .y { grid-column: 2; }
+  .hero { padding-block: 40px 20px; }
+  .contact { padding: 28px 20px; }
+  .bia { padding: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <span>Riyadh, Saudi Arabia</span>
+    <nav aria-label="Sections">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <p class="ar" lang="ar" dir="rtl" style="text-align:left">مجد الحمدان</p>
+    <h1>Majd Alhamdan</h1>
+    <p class="role"><b>PharmD</b> · Scientific Evaluation · Health Informatics</p>
+    <p class="lede">I evaluate clinical and economic evidence for regulatory and reimbursement decisions in Saudi Arabia: SFDA dossiers, risk–benefit review, systematic literature review and budget impact modeling. I also build AI tools that change how health technologies get assessed.</p>
+    <span class="now"><i></i>Now: risk–benefit assessment (volunteer), Oncology &amp; Hematology, SFDA</span>
+    <dl class="facts">
+      <div><dt>Experience</dt><dd>6 <small>years</small></dd></div>
+      <div><dt>PharmD GPA</dt><dd>4.82 <small>/ 5</small></dd></div>
+      <div><dt>M.Sc. GPA</dt><dd>4.89 <small>/ 5</small></dd></div>
+      <div><dt>Publications</dt><dd>3 <small>peer-reviewed</small></dd></div>
+    </dl>
+  </div>
+
+  <div class="lens" role="group" aria-label="Read this CV through a lens">
+    <span class="lens-label">Read as</span>
+    <div class="lens-btns">
+      <button type="button" id="lens-all" data-lens="all" aria-pressed="true">Everything</button>
+      <button type="button" id="lens-reg" data-lens="reg" aria-pressed="false">Regulatory <span></span></button>
+      <button type="button" id="lens-hta" data-lens="hta" aria-pressed="false">HTA &amp; economics <span></span></button>
+      <button type="button" id="lens-ev" data-lens="ev" aria-pressed="false">Evidence &amp; research <span></span></button>
+      <button type="button" id="lens-ai" data-lens="ai" aria-pressed="false">AI &amp; informatics <span></span></button>
+    </div>
+    <p class="lens-note" id="lens-note" aria-live="polite">Pick a lens to highlight the parts of my work a regulator, payer, researcher or AI team would care about.</p>
+  </div>
+
+  <section id="experience">
+    <div class="sec-head"><h2>Experience</h2></div>
+
+    <article class="entry" data-tags="reg ev">
+      <div class="when"><b>Current</b>Jul 2026 – Present</div>
+      <div>
+        <h3 class="mark">Scientific Evaluation Specialist (Volunteer)</h3>
+        <p class="org">Risk–Benefit Assessment, Oncology &amp; Hematology Department · Saudi Food and Drug Authority (SFDA)</p>
+        <ul>
+          <li>Contribute to a real-world evidence (RWE) project within the department.</li>
+          <li>Review oncology and hematology medications as part of risk–benefit assessment.</li>
+          <li>Prepare the department's annual report.</li>
+        </ul>
+        <div class="scale-wrap">
+          <svg class="scale" id="scale" viewBox="0 0 150 110" role="img" aria-label="A balance weighing benefits against risks">
+            <rect x="72" y="30" width="6" height="66" fill="var(--muted)"/>
+            <rect x="50" y="96" width="50" height="6" rx="2" fill="var(--muted)"/>
+            <g class="beam" id="beam">
+              <rect x="15" y="27" width="120" height="5" rx="2" fill="var(--ink)"/>
+              <g class="pan-l" id="pan-l">
+                <line x1="20" y1="30" x2="10" y2="62" stroke="var(--muted)" stroke-width="1.2"/>
+                <line x1="20" y1="30" x2="30" y2="62" stroke="var(--muted)" stroke-width="1.2"/>
+                <path d="M4 62 h32 a16 9 0 0 1 -32 0z" fill="var(--pine)"/>
+                <text x="20" y="84" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--pine)">benefit</text>
+              </g>
+              <g class="pan-r" id="pan-r">
+                <line x1="130" y1="30" x2="120" y2="62" stroke="var(--muted)" stroke-width="1.2"/>
+                <line x1="130" y1="30" x2="140" y2="62" stroke="var(--muted)" stroke-width="1.2"/>
+                <path d="M114 62 h32 a16 9 0 0 1 -32 0z" fill="var(--gold)"/>
+                <text x="130" y="84" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--gold)">risk</text>
+              </g>
+            </g>
+            <circle cx="75" cy="29" r="4" fill="var(--ink)"/>
+          </svg>
+          <div>
+            <p id="scale-text">Every review ends on a balance. Add evidence and see which way it tips.</p>
+            <button type="button" id="scale-btn">Add evidence</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry" data-tags="reg hta ev">
+      <div class="when">2024 – 2026</div>
+      <div>
+        <h3 class="mark">Medical Evaluation Specialist</h3>
+        <p class="org">HEPA Consulting Company</p>
+        <ul>
+          <li>Prepared pharmaceutical dossiers for SFDA submission, evaluating clinical effectiveness, innovation and regulatory compliance.</li>
+          <li>Ran systematic literature reviews and prior-art searches to judge therapeutic value and innovation.</li>
+          <li>Built budget impact analyses and wrote the technical reports that support evidence-based decisions.</li>
+        </ul>
+        <div class="ctd">
+          <div class="ctd-label">Dossier scope: ICH Common Technical Document. Tap a module.</div>
+          <div class="ctd-row" role="group" aria-label="CTD modules">
+            <button type="button" id="ctd-1" data-m="1" aria-pressed="false"><b>M1</b><span>Regional administrative</span></button>
+            <button type="button" id="ctd-2" data-m="2" aria-pressed="false"><b>M2</b><span>Overviews &amp; summaries</span></button>
+            <button type="button" id="ctd-3" data-m="3" aria-pressed="false"><b>M3</b><span>Quality</span></button>
+            <button type="button" id="ctd-4" data-m="4" aria-pressed="false"><b>M4</b><span>Nonclinical reports</span></button>
+            <button type="button" id="ctd-5" data-m="5" aria-pressed="true"><b>M5</b><span>Clinical study reports</span></button>
+          </div>
+          <div class="ctd-detail" id="ctd-detail" aria-live="polite"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry" data-tags="reg ev">
+      <div class="when">2021 – 2023</div>
+      <div>
+        <h3 class="mark">Medical Coordinator, Sales &amp; Marketing</h3>
+        <p class="org">Sudair Pharmaceutical Company, Riyadh</p>
+        <ul>
+          <li>Reviewed product characteristics, prescribing information and clinical data for scientific accuracy and compliance.</li>
+          <li>Developed evidence-based materials and answered complex medical inquiries from healthcare professionals.</li>
+          <li>Built relationships with key opinion leaders and supported advisory boards and expert discussions.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section id="projects">
+    <div class="sec-head"><h2>Projects</h2></div>
+    <div class="projects">
+      <article class="proj" data-tags="ai hta">
+        <span class="yr">2026</span>
+        <span class="tag">HTA tool</span>
+        <h3 class="mark">MedAI Eval KSA</h3>
+        <p>An AI-powered health technology assessment platform for evaluating medical AI technologies.</p>
+        <a class="demo" href="https://lnkd.in/dmt32RJD" target="_blank" rel="noopener">Open live demo ↗</a>
+      </article>
+      <article class="proj" data-tags="ai ev">
+        <span class="yr">2026</span>
+        <span class="tag">M.Sc. thesis</span>
+        <h3 class="mark">Artificial Intelligence in Medical Research Among Saudi Researchers</h3>
+        <p>A cross-sectional study of AI adoption and readiness among researchers in Saudi Arabia.</p>
+      </article>
+      <article class="proj" data-tags="hta">
+        <span class="yr">2025</span>
+        <span class="tag">Pharmacoeconomics</span>
+        <h3 class="mark">Semaglutide 2.4 mg for Obesity: Budget Impact Model</h3>
+        <p>Led the model estimating the financial impact of adopting obesity therapy in Saudi Arabia.</p>
+      </article>
+    </div>
+
+    <div class="bia" data-tags="hta">
+      <div>
+        <h3 class="mark">Try a budget impact model</h3>
+        <p class="hint">The kind of question I answer for payers: if a new therapy is adopted, what does it add to the budget each year?</p>
+        <div class="ctrl">
+          <label for="bia-pop">Eligible patients <output id="o-pop"></output></label>
+          <input type="range" id="bia-pop" min="10000" max="500000" step="10000" value="120000">
+        </div>
+        <div class="ctrl">
+          <label for="bia-up">Uptake in year 1 <output id="o-up"></output></label>
+          <input type="range" id="bia-up" min="1" max="40" step="1" value="8">
+        </div>
+        <div class="ctrl">
+          <label for="bia-new">New therapy, cost per patient-year <output id="o-new"></output></label>
+          <input type="range" id="bia-new" min="1000" max="60000" step="500" value="14000">
+        </div>
+        <div class="ctrl">
+          <label for="bia-old">Current care it replaces <output id="o-old"></output></label>
+          <input type="range" id="bia-old" min="0" max="60000" step="500" value="4500">
+        </div>
+      </div>
+      <div class="bia-out">
+        <div class="bars" id="bars" aria-hidden="true"></div>
+        <div class="bar-labels"><span>Year 1</span><span>Year 2</span><span>Year 3</span></div>
+        <div class="total"><span>3-year budget impact</span><strong id="bia-total" aria-live="polite"></strong></div>
+        <p class="disclaimer">Toy example with made-up inputs. Uptake grows 50% a year. Not results from the semaglutide model.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="sec-head"><h2>Publications</h2></div>
+    <ol class="refs">
+      <li data-tags="hta ev"><span class="t mark"><a href="https://pubmed.ncbi.nlm.nih.gov/36164576/" target="_blank" rel="noopener">Cost-effectiveness of Ribociclib in HER2-negative breast cancer: A synthesis of current evidence</a>. <span class="j">Saudi Pharmaceutical Journal.</span></span><span class="y">2022</span></li>
+      <li data-tags="ev"><span class="t mark"><a href="https://doi.org/10.3390/metabo12020179" target="_blank" rel="noopener">Serum Metabolomic Analysis of Male Patients with Cannabis or Amphetamine Use Disorder</a>. <span class="j">Metabolites 12(2):179.</span></span><span class="y">2022</span></li>
+      <li data-tags="ev"><span class="t mark"><a href="https://doi.org/10.3390/ph18030417" target="_blank" rel="noopener">Assessing the Antibacterial Potential and Biofilm Inhibition Capability of Atorvastatin-Loaded Nanostructured Lipid Carriers via Crystal Violet Assay</a>. <span class="j">Pharmaceuticals 18(3):417.</span></span><span class="y">2025</span></li>
+    </ol>
+  </section>
+
+  <section id="credentials">
+    <div class="sec-head"><h2>Credentials</h2></div>
+    <div class="creds">
+      <div>
+        <h3>Education</h3>
+        <ul>
+          <li data-tags="ai"><b class="mark">M.Sc. Health Informatics</b><span class="sub">King Saud bin Abdulaziz University for Health Sciences · 2026 · GPA 4.89/5</span></li>
+          <li data-tags="reg ev"><b class="mark">Doctor of Pharmacy (PharmD)</b><span class="sub">King Saud University · 2021 · GPA 4.82/5 · First Honors</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Certifications</h3>
+        <ul>
+          <li data-tags="ai"><b class="mark">Practical AI for Professionals</b><span class="sub">Northeastern University London · Jul 2025</span></li>
+          <li data-tags="hta"><b class="mark">Value-Based Care Specialization</b><span class="sub">University of Houston · Jul 2024</span></li>
+          <li data-tags="hta ai"><b class="mark">Data Science in Health Technology Assessment</b><span class="sub">Genentech · Jun 2024</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Expertise</h3>
+        <div class="chips">
+          <span>Regulatory compliance &amp; SFDA submissions</span>
+          <span>Risk–benefit assessment</span>
+          <span>Real-world evidence</span>
+          <span>Systematic literature review</span>
+          <span>Health technology assessment</span>
+          <span>Budget impact analysis</span>
+          <span>Scientific communication</span>
+        </div>
+      </div>
+      <div>
+        <h3>Tools &amp; languages</h3>
+        <div class="chips">
+          <span>Python</span><span>Power BI</span><span>Microsoft Azure AI</span>
+          <span>Arabic, native</span><span>English, professional</span>
+        </div>
+      </div>
+      <div>
+        <h3>Recognition</h3>
+        <ul>
+          <li data-tags="ev"><b class="mark">3rd Place, Young Pharmacist Research Award</b><span class="sub">Best Poster · 2021</span></li>
+          <li><b>Distinguished &amp; Talented Students Program</b><span class="sub">King Saud University</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Working on evidence, HTA or regulatory strategy?</h2>
+    <p>I'm open to roles and collaborations in health technology assessment, regulatory science and health informatics.</p>
+    <div class="row">
+      <span class="email"><code id="email">Majd.M.Alhamdan@gmail.com</code><button class="copy" id="copy-email" type="button">Copy</button></span>
+      <a href="https://www.linkedin.com/in/majd-alhamdan" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/MajdAlhamdan" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Majd Alhamdan · Riyadh</footer>
+</div>
+
+<script>
+(function () {
+  var notes = {
+    all: 'Pick a lens to highlight the parts of my work a regulator, payer, researcher or AI team would care about.',
+    reg: 'Regulatory: SFDA risk–benefit review, CTD dossiers and compliance review.',
+    hta: 'HTA & economics: budget impact models, cost-effectiveness research and value-based care.',
+    ev: 'Evidence & research: real-world evidence, systematic reviews and peer-reviewed studies.',
+    ai: 'AI & informatics: an HTA platform for medical AI, a thesis on AI readiness, and health informatics training.'
+  };
+  var tagged = Array.prototype.slice.call(document.querySelectorAll('[data-tags]'));
+  var btns = Array.prototype.slice.call(document.querySelectorAll('[data-lens]'));
+  btns.forEach(function (b) {
+    var k = b.dataset.lens, span = b.querySelector('span');
+    if (span) span.textContent = tagged.filter(function (el) { return el.dataset.tags.split(' ').indexOf(k) > -1; }).length;
+    b.addEventListener('click', function () { setLens(k); });
+  });
+  function setLens(k) {
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lens === k)); });
+    document.body.classList.toggle('filtering', k !== 'all');
+    tagged.forEach(function (el) {
+      var hit = el.dataset.tags.split(' ').indexOf(k) > -1;
+      el.classList.toggle('hit', hit);
+      el.classList.toggle('dim', k !== 'all' && !hit);
+    });
+    document.getElementById('lens-note').textContent = notes[k];
+    try { localStorage.setItem('lens', k); } catch (e) {}
+  }
+  try { var saved = localStorage.getItem('lens'); if (saved && notes[saved]) setLens(saved); } catch (e) {}
+
+  var ctd = {
+    1: 'Module 1 is region-specific: application forms, proposed labeling and the administrative documents a national authority such as the SFDA requires.',
+    2: 'Module 2 holds the overviews and summaries of quality, nonclinical and clinical data. It is where a reviewer gets the argument for the product in one place.',
+    3: 'Module 3 covers quality: how the drug substance and product are made, controlled and kept stable.',
+    4: 'Module 4 contains the nonclinical study reports: pharmacology, pharmacokinetics and toxicology.',
+    5: 'Module 5 contains the clinical study reports, the evidence on efficacy and safety in patients. This is where most of my evaluation work focuses.'
+  };
+  var ctdBtns = Array.prototype.slice.call(document.querySelectorAll('[data-m]'));
+  var ctdDetail = document.getElementById('ctd-detail');
+  function setCtd(m) {
+    ctdBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.m === m)); });
+    ctdDetail.textContent = ctd[m];
+  }
+  ctdBtns.forEach(function (b) { b.addEventListener('click', function () { setCtd(b.dataset.m); }); });
+  setCtd('5');
+
+  var steps = [
+    { tilt: 0, text: 'Every review ends on a balance. Add evidence and see which way it tips.' },
+    { tilt: -8, text: 'Efficacy data from pivotal trials: the benefit side gets heavier.' },
+    { tilt: 4, text: 'A safety signal appears in post-marketing reports. The balance shifts.' },
+    { tilt: -6, text: 'Real-world evidence confirms benefit in local patients, and the risk is manageable with monitoring.' },
+    { tilt: -10, text: 'Overall the benefits outweigh the risks for this indication. That judgement is the job.' }
+  ];
+  var si = 0;
+  var beam = document.getElementById('beam'), pl = document.getElementById('pan-l'), pr = document.getElementById('pan-r');
+  function tip() {
+    si = (si + 1) % steps.length;
+    var t = steps[si].tilt;
+    beam.style.transform = 'rotate(' + t + 'deg)';
+    pl.style.transform = 'rotate(' + (-t) + 'deg)'; pl.style.transformOrigin = '20px 30px';
+    pr.style.transform = 'rotate(' + (-t) + 'deg)'; pr.style.transformOrigin = '130px 30px';
+    document.getElementById('scale-text').textContent = steps[si].text;
+    document.getElementById('scale-btn').textContent = si === steps.length - 1 ? 'Start over' : 'Add evidence';
+  }
+  document.getElementById('scale-btn').addEventListener('click', tip);
+  document.getElementById('scale').addEventListener('click', tip);
+
+  var $ = function (id) { return document.getElementById(id); };
+  var fmtN = new Intl.NumberFormat('en-US');
+  function sar(v) {
+    var a = Math.abs(v), s = v < 0 ? '−' : '';
+    if (a >= 1e9) return s + 'SAR ' + (a / 1e9).toFixed(2) + 'B';
+    if (a >= 1e6) return s + 'SAR ' + (a / 1e6).toFixed(1) + 'M';
+    if (a >= 1e3) return s + 'SAR ' + Math.round(a / 1e3) + 'K';
+    return s + 'SAR ' + Math.round(a);
+  }
+  function bia() {
+    var pop = +$('bia-pop').value, up = +$('bia-up').value / 100, cn = +$('bia-new').value, co = +$('bia-old').value;
+    $('o-pop').textContent = fmtN.format(pop);
+    $('o-up').textContent = Math.round(up * 100) + '%';
+    $('o-new').textContent = 'SAR ' + fmtN.format(cn);
+    $('o-old').textContent = 'SAR ' + fmtN.format(co);
+    var years = [0, 1, 2].map(function (y) {
+      var u = Math.min(1, up * Math.pow(1.5, y));
+      return pop * u * (cn - co);
+    });
+    var max = Math.max.apply(null, years.map(Math.abs)) || 1;
+    $('bars').innerHTML = years.map(function (v) {
+      return '<div class="bar' + (v < 0 ? ' neg' : '') + '"><span class="v">' + sar(v) + '</span><div class="col" style="height:' + Math.max(1, Math.abs(v) / max * 82) + '%"></div></div>';
+    }).join('');
+    var tot = years.reduce(function (a, b) { return a + b; }, 0);
+    $('bia-total').textContent = (tot < 0 ? 'Saves ' + sar(-tot) : sar(tot));
+  }
+  ['bia-pop', 'bia-up', 'bia-new', 'bia-old'].forEach(function (id) { $(id).addEventListener('input', bia); });
+  bia();
+
+  var btn = $('copy-email'), code = $('email');
+  btn.addEventListener('click', function () {
+    function selectIt() {
+      var r = document.createRange(); r.selectNodeContents(code);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected';
+    }
+    try { navigator.clipboard.writeText(code.textContent).then(function () { btn.textContent = 'Copied'; }, selectIt); }
+    catch (e) { selectIt(); }
+    setTimeout(function () { btn.textContent = 'Copy'; }, 2000);
+  });
+})();
+</script>
+</body>
+</html>
